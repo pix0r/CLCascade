@@ -40,7 +40,7 @@
     
     if ([_cascadeNavigator.rootViewController currentScrollPosition] == CLCascadeViewScrollMasterPosition) {
 
-        if ((CGRectContainsPoint(_cascadeNavigator.frame, point)) && (CGRectContainsPoint(_categoriesView.frame, point))) {
+        if (([[self subviews] count] <= 2) && (CGRectContainsPoint(_cascadeNavigator.frame, point)) && (CGRectContainsPoint(_categoriesView.frame, point))) {
             return [_categoriesView hitTest:point withEvent:event];
         }
     }
